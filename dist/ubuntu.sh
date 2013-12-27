@@ -13,7 +13,9 @@ sudo apt-get install -y automake autoconf pkg-config
 sudo apt-get install -y git-core subversion
 sudo apt-get install -y zlib1g zlib1g-dev
 sudo apt-get install -y sqlite3 libsqlite3-dev libgdbm-dev
+sudo apt-get install -y postgresql libpq-dev
 sudo apt-get install -y libxml2-dev libxslt-dev
+sudo apt-get install -y libpcap-dev
 
 # rvmのインストール
 if [ ! -e ~/.rvm ]; then
@@ -33,6 +35,13 @@ rvm --default use 1.9.3
 
 # ruby gemsの設定
 rvm rubygems current
+
+
+# Metasploitの取得
+git clone https://github.com/rapid7/metasploit-framework
+pushd metasploit-framework
+	bundle install
+popd
 
 # vim: set nu ts=2 autoindent : #
 
