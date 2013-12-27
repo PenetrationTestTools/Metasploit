@@ -8,7 +8,7 @@ fi
 
 # get linux distribution name
 dist_name=`cat /etc/issue | awk '{print $1}'`
-deploy_script="./init/${dist_name,,}.sh"
+deploy_script="./dist/${dist_name,,}.sh"
 
 # ディストリビューションのデプロイスクリプトの存在確認
 if [ -f $deploy_script ]
