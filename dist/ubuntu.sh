@@ -29,7 +29,7 @@ rvm reload
 
 # ruby1.9.3のインストール
 rvm install 1.9.3
-rvm use 1.9.3 --default
+rvm --default use 1.9.3
 
 # ruby gemsの設定
 rvm rubygems current
