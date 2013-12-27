@@ -29,7 +29,10 @@ rvm reload
 
 # ruby1.9.3のインストール
 rvm install 1.9.3
-rvm use 1.9.3
+rvm use 1.9.3 --default
+
+# ruby gemsの設定
+rvm rubygems current
 
 # vim: set nu ts=2 autoindent : #
 
