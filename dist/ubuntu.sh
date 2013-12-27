@@ -5,15 +5,15 @@
 # curlのインストール
 #
 sudo apt-get install -y curl
-sudo apt-get install build-essential bison libc6-dev ncurses-dev
-sudo apt-get install libffi-dev
-sudo apt-get install openssl libssl-dev libyaml-dev
-sudo apt-get install libreadline6 libreadline6-dev
-sudo apt-get install automake autoconf pkg-config
-sudo apt-get install git-core subversion
-sudo apt-get install zlib1g zlib1g-dev
-sudo apt-get install sqlite3 libsqlite3-dev libgdbm-dev
-sudo apt-get install libxml2-dev libxslt-dev
+sudo apt-get install -y build-essential bison libc6-dev ncurses-dev
+sudo apt-get install -y libffi-dev
+sudo apt-get install -y openssl libssl-dev libyaml-dev
+sudo apt-get install -y libreadline6 libreadline6-dev
+sudo apt-get install -y automake autoconf pkg-config
+sudo apt-get install -y git-core subversion
+sudo apt-get install -y zlib1g zlib1g-dev
+sudo apt-get install -y sqlite3 libsqlite3-dev libgdbm-dev
+sudo apt-get install -y libxml2-dev libxslt-dev
 
 # rvmのインストール
 if [ ! -e ~/.rvm ]; then
