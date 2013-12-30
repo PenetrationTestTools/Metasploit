@@ -45,7 +45,7 @@ fi
 # pathの設定
 if [ -e /usr/local/rvm ]; then
 	# Activattion
-	source /etc/bash.bashrc
+	source /etc/bashrc
 fi
 
 # rvmを最新バージョンへ更新
@@ -54,7 +54,7 @@ rvm reload
 
 # ruby1.9.3のインストール
 rvm install 1.9.3
-rvm --default use 1.9.3
+rvm use 1.9.3 --default
 
 # ruby gemsの設定
 rvm rubygems current
