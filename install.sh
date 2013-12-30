@@ -7,7 +7,8 @@ if [ $EUID -eq 0 ]; then
 fi
 
 # get linux distribution name
-dist_name=`cat /etc/issue | awk '{print $1}'`
+read dist_hint < /etc/issue
+dist_name=`echo $dist_hint | awk '{print $1}'`
 deploy_script="./dist/${dist_name,,}.sh"
 
 # ディストリビューションのデプロイスクリプトの存在確認
