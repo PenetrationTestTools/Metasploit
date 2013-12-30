@@ -11,8 +11,14 @@ if [ ! -e ~/.rvm ]; then
 	curl -L https://get.rvm.io | bash
 fi
 
-# Activattion
-source ~/.rvm/scripts/rvm
+# pathの設定
+if [ ! -e /usr/local/rvm ]; then
+	# Activattion
+	source /usr/local/rvm/bin
+elif
+	# Activattion
+	source ~/.rvm/scripts/rvm
+fi
 
 # rvmを最新バージョンへ更新
 rvm get head
@@ -24,7 +30,6 @@ rvm --default use 1.9.3
 
 # ruby gemsの設定
 rvm rubygems current
-
 
 # Metasploitの取得
 git clone https://github.com/rapid7/metasploit-framework
