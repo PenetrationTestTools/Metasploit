@@ -18,9 +18,24 @@ sudo yum -y groupinstall "Development Tools"
 sudo yum -y install kernel-devel
 
 #
+# その他
+#
+yum -y install libpcap libpcap-devel
+
+#
 # PostgreSqlのインストール
 #
 sudo yum -y install postgresql postgresql-server postgresql-devel
+
+#
+# サービスの再起動
+#
+sudo service postgresql resatrt
+
+#
+# PostgreSQLの初期化
+#
+sudo su postgres -c 'initdb -D /var/lib/pgsql/data/'
 
 # rvmのインストール
 if [ ! -e ~/.rvm ]; then
