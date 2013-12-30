@@ -4,7 +4,23 @@
 # rvmのインストールに必要なパッケージのインストール
 # curlのインストール
 #
-sudo yum install -y curl
+sudo yum -y install curl
+
+#
+# 開発環境のインストール
+#
+sudo yum -y install git
+sudo yum -y groupinstall "Development Tools"
+
+#
+# kernel-develのインストール
+#
+sudo yum -y install kernel-devel
+
+#
+# PostgreSqlのインストール
+#
+sudo yum -y install postgresql postgresql-server postgresql-devel
 
 # rvmのインストール
 if [ ! -e ~/.rvm ]; then
@@ -12,13 +28,13 @@ if [ ! -e ~/.rvm ]; then
 fi
 
 # pathの設定
-if [ ! -e /usr/local/rvm ]; then
-	# Activattion
-	source /usr/local/rvm/bin
-elif
-	# Activattion
-	source ~/.rvm/scripts/rvm
-fi
+#if [ ! -e /usr/local/rvm ]; then
+#	# Activattion
+#	source /usr/local/rvm/bin/
+#else
+#	# Activattion
+#	source ~/.rvm/scripts/rvm
+#fi
 
 # rvmを最新バージョンへ更新
 rvm get head
