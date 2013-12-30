@@ -43,13 +43,10 @@ if [ ! -e ~/.rvm ]; then
 fi
 
 # pathの設定
-#if [ ! -e /usr/local/rvm ]; then
-#	# Activattion
-#	source /usr/local/rvm/bin/
-#else
-#	# Activattion
-#	source ~/.rvm/scripts/rvm
-#fi
+if [ ! -e /usr/local/rvm ]; then
+	# Activattion
+	source /etc/bash.bashrc
+fi
 
 # rvmを最新バージョンへ更新
 rvm get head
