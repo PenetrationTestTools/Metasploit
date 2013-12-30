@@ -43,7 +43,7 @@ if [ ! -e ~/.rvm ]; then
 fi
 
 # pathの設定
-if [ ! -e /usr/local/rvm ]; then
+if [ -e /usr/local/rvm ]; then
 	# Activattion
 	source /etc/bash.bashrc
 fi
